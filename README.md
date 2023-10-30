@@ -4,7 +4,7 @@ Work meeting at Prague on 2023-11-03, Hackathon at IETF 118
 **Time:** Friday, November 3rd, 09:00-17:00 UTC (work meeting)<br>
 Saturday, November 4th and Sunday, November 5th (Hackathon)
 
-Location: IETF 118 venue, Prague Hilton, Prague, CZ
+Location: IETF 118 venue, Room Florenc 1/2 @ Prague Hilton, Prague, CZ
 
 Local time in various locations:<br>
 https://www.timeanddate.com/worldclock/fixedtime.html?msg=T2TRG+work+meeting&iso=20231103T0900&p1=1440&ah=8<br>
