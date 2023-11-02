@@ -14,14 +14,14 @@ https://www.timeanddate.com/worldclock/fixedtime.html?msg=T2TRG+work+meeting&iso
 
 We are currently looking at an overall structure of the Friday agenda like this:
 
-| Time      | Subjects                                               |
-|-----------|--------------------------------------------------------|
-| 1000–1200 | Welcome; Presentation from Korea, Security topics      |
-| 1200–1330 | (Lunch break)                                          |
-| 1330–1530 | Security overflow, Protocols and Specifications        |
-| 1530–1600 | (Coffee break)                                         |
-| 1600–1800 | Protocols and Specifications (WISHI etc.), Foundations |
 
+| Time      | Subjects                                                                                                                                         |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1000–1200 | Welcome; <br>10:30: draft-lee-asdf-digital-twin (KST timezone), <br>Security topics: Raytime; active RG documents                              |
+| 1200–1330 | (Lunch break)                                                                                                                                    |
+| 1330–1530 | (Security overflow), Secure Discovery & self-description security considerations; more self-description issues<br>Protocols and Specifications |
+| 1530–1600 | (Coffee break)                                                                                                                                   |
+| 1600–1800 | non-IP Cluster: Intro, NIPC, Onion CoAP, GATT…                                                                                                   |
 
 Specific subjects proposed (not complete, please fill in):
 
@@ -84,4 +84,6 @@ https://datatracker.ietf.org/doc/draft-lee-asdf-digital-twin/
 * <https://datatracker.ietf.org/doc/draft-amsuess-core-coap-over-gatt/>
   How does this fit into the non-IP picture
   
+* <https://datatracker.ietf.org/doc/draft-bormann-t2trg-slipmux/>
+  (as an example of Proximity-based "discovery")
   
