@@ -6,6 +6,9 @@ Saturday, November 4th and Sunday, November 5th (Hackathon)
 
 Location: IETF 118 venue, Room Florenc 1/2 @ Prague Hilton, Prague, CZ
 
+Meetecho:
+https://meetings.conf.meetecho.com/interim/?short=6926e324-e1d3-4704-957f-53584db705b3
+
 Local time in various locations:<br>
 https://www.timeanddate.com/worldclock/fixedtime.html?msg=T2TRG+work+meeting&iso=20231103T0900&p1=1440&ah=8<br>
 
