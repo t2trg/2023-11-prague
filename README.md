@@ -16,26 +16,18 @@ We are currently looking at an overall structure of the Friday agenda like this:
 
 | Time      | Subjects                                               |
 |-----------|--------------------------------------------------------|
-| 1000–1200 | Welcome; Security topics                               |
+| 1000–1200 | Welcome; Presentation from Korea, Security topics      |
 | 1200–1330 | (Lunch break)                                          |
 | 1330–1530 | Security overflow, Protocols and Specifications        |
 | 1530–1600 | (Coffee break)                                         |
 | 1600–1800 | Protocols and Specifications (WISHI etc.), Foundations |
 
+
 Specific subjects proposed (not complete, please fill in):
 
 ## Security Topics
 
-(Carsten Bormann:)
-
-* Secure Discovery — Security Objectives and how to get there
-
-(Christian Amsüss:) I'd like to propose my two current documents:
-
-* <https://datatracker.ietf.org/doc/draft-amsuess-t2trg-onion-coap/>
-
-  with the intention to gather feedback and rally people to actually
-  run the experiment
+(Christian Amsüss:) 
 
 * <https://datatracker.ietf.org/doc/draft-amsuess-t2trg-raytime/>
 
@@ -48,10 +40,48 @@ Specific subjects proposed (not complete, please fill in):
 * <https://datatracker.ietf.org/doc/draft-irtf-t2trg-taxonomy-manufacturer-anchors/>
 * <https://datatracker.ietf.org/doc/draft-irtf-t2trg-amplification-attacks/>
 
+### Secure Discovery, self-description security consideration
+
+(Carsten Bormann:)
+
+* discovery access control,  secure discovery,  privacy-preserving discovery -- Security Objectives and how to get there
+  (Continuation of May 2023 discussion)
+
+(Ari Keranen:)
+
+* W3C TD security considerations
+
+## Pivoting over to general self-description topics
+
+### self-descriptions: instance vs. class
+
+이현정 (Hyunjeong Lee): 
+
+https://datatracker.ietf.org/doc/draft-lee-asdf-digital-twin/
+
+(Presentation set at 10:30 to fit Korea timezone.)
+
+### self-descriptions: reading a YANG datastore without fully understanding it
+
+(Laurent Toutain)
+
 ## Non-IP Cluster
 
 * Naming and Identity in <https://datatracker.ietf.org/doc/draft-amsuess-core-coap-over-gatt/>
 
+
 (Eliot Lear:) \[not in first slot]
 
 * OSS for both SCIM and the forthcoming non-IP control (NIPC)
+
+(Christian Amsüss:) 
+
+* <https://datatracker.ietf.org/doc/draft-amsuess-t2trg-onion-coap/>
+
+  with the intention to gather feedback and rally people to actually
+  run the experiment
+
+* <https://datatracker.ietf.org/doc/draft-amsuess-core-coap-over-gatt/>
+  How does this fit into the non-IP picture
+  
+  
