@@ -58,11 +58,12 @@
   \end{enumerate}
 \end{frame}
 
-\begin{frame}{In Constrained RESTful environments}\Large
+\begin{frame}{In Constrained RESTful environments}\large
   \begin{itemize}
     \item \texttt{coap+uart://ttyUSB0} provides ``how'', ``where'' and even some trust, but no identity. (\ietfdraft{bormann-t2trg-slipmux})
-    \item \texttt{coap+gatt://001122334455.ble.arpa} (based on BLE MAC address) provides ``how'', ``where'', identity, but no trust (\ietfdraft{amsuess-core-coap-over-gatt})
+    \item \texttt{coap+gatt://001122334455.ble.arpa} (based on BLE MAC address) provides ``how'', ``where'', identity, but no trust (\ietfdraft{amsuess-core-coap-over-gatt})\footnote{Why .arpa and not bare like coap+uart? Because it allows meshing with the next item.}
     \item \texttt{coap://nbswy3dpo5xxe3denbswy3dpo5xxe3de.ab.rdlink.arpa} provides identity and trust, and relies on a protocol specific to \texttt{.rdlink.arpa} to provide a ``where'', which can also provide an alternative ``how''.
+    \item Anything URN based (e.\,g. \texttt{urn:dev:} from \rfc{9039}): provides identity, but can not easily be used as a scheme/authority component with a path.
     \item The ``how'' is not absolutely critical -- proxies don't break trust.
   \end{itemize}
 \end{frame}
