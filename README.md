@@ -18,8 +18,8 @@ We are currently looking at an overall structure of the Friday agenda like this:
 | Time      | Subjects                                                                                                                                         |
 |-----------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1000–1200 | Welcome; <br>10:30: draft-lee-asdf-digital-twin (KST timezone), <br>Security topics: Raytime; active RG documents                              |
-| 1200–1330 | (Lunch break)                                                                                                                                    |
-| 1330–1530 | (Security overflow), <br>Secure Discovery & self-description security considerations; more self-description issues<br>Protocols and Specifications |
+| 1215–1345 | (Lunch break)                                                                                                                                    |
+| 1345–1530 | (Security overflow), <br>Secure Discovery & self-description security considerations; more self-description issues<br>Protocols and Specifications |
 | 1530–1600 | (Coffee break)                                                                                                                                   |
 | 1600–1800 | non-IP Cluster: Intro, NIPC, Onion CoAP, GATT…                                                                                                   |
 
