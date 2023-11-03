@@ -1,0 +1,75 @@
+\documentclass[aspectratio=169,colorlinks]{beamer}
+\usetheme{Boadilla} % plainest one with slide number footer
+% The empty linkcolor is mainly to not have a non-matching color in the presentation name in the footer
+\hypersetup{colorlinks,linkcolor=,urlcolor=blue!50!black}
+
+% generic packages
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{verbatim}
+
+% This should be my "always used in presentations" git module
+\newcommand{\rfc}[1]{\href{https://datatracker.ietf.org/doc/html/rfc#1}{RFC~#1}}
+\newcommand{\ietfdraft}[1]{\href{https://datatracker.ietf.org/doc/draft-#1/}{draft #1}}
+
+% about the presentation
+\title{Naming Things}
+\subtitle{With bits of \ietfdraft{amsuess-t2trg-onion-coap}, \ietfdraft{amsuess-core-coap-over-gatt} and \ietfdraft{amsuess-t2trg-rdlink}}
+\author{Christian~Amsüss}
+\date{IETF118 Prague, T2TRG, 2023-11-03}
+
+% attach self
+
+\usepackage{embedfile}
+\embedfile{\jobname.tex}
+\embedfile{Makefile}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{The naming of things is a difficult matter}\Large
+  We have a uniform way of doing this: URIs.
+
+  \bigskip
+
+  URIs name resources on things. The authority component names (an aspect of) the thing. The scheme names how to reach it.%
+  \footnote{This might be controversial, and while I'm happy to \textit{have} the discussion, I didn't prepare anything for it.}
+\end{frame}
+
+\begin{frame}{What have scheme and authority ever done for us?}\framesubtitle{by example of web browser URIs}\Large
+  \begin{enumerate}
+    \item Tell us how to reach the service: \texttt{\textbf{https://}example.com}
+    \item Tell us where to reach the service: \texttt{https://\textbf{example.com}} being resolved through whatever the system's resolver gives\footnote{OK it's DNS, and maps to an IPv4 or IPv6 address)}
+    \item Tell us how to verify whom to talk to: \texttt{https://\textbf{example.com}} through the browser PKI
+    \item Provides identity: \texttt{\textbf{https://example.com/page1}} can be compared to an archived version
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{But it's never that simple}\framesubtitle{even in the browser}\Large
+  \begin{enumerate}
+    \item Tell us how to reach the service: \ldots{} but later we go h2/3
+    \begin{itemize}
+      \item \ldots{} but DNS resolution may provide hints for that (?)
+    \end{itemize}
+    \item Tell us where to reach the service: \ldots{} \texttt{http://i2pwiki.i2p} intentionally does not resolve
+    \item Tell us how to verify whom to talk to: \ldots{} \texttt{https://[fc00:db8:1]} needs extra knowledge
+    \item Provides identity: \ldots{} \texttt{https://[fe80::1\%eth0]} better not be compared across hosts
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{In Constrained RESTful environments}\large
+  \begin{itemize}
+    \item \texttt{coap+uart://ttyUSB0} provides ``how'', ``where'' and even some trust, but no identity. (\ietfdraft{bormann-t2trg-slipmux})
+    \item \texttt{coap+gatt://001122334455.ble.arpa} (based on BLE MAC address) provides ``how'', ``where'', identity, but no trust (\ietfdraft{amsuess-core-coap-over-gatt})\footnote{Why .arpa and not bare like coap+uart? Because it allows meshing with the next item.}
+    \item \texttt{coap://nbswy3dpo5xxe3denbswy3dpo5xxe3de.ab.rdlink.arpa} provides identity and trust, and relies on a protocol specific to \texttt{.rdlink.arpa} to provide a ``where'', which can also provide an alternative ``how''.
+    \item Anything URN based (e.\,g. \texttt{urn:dev:} from \rfc{9039}): provides identity, but can not easily be used as a scheme/authority component with a path.
+    \item The ``how'' is not absolutely critical -- proxies don't break trust.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Advancing the topic}\Large
+  Open discussion
+\end{frame}
+
+\end{document}
